@@ -1,0 +1,9 @@
+grad<-read.csv("C:/Users/hp/BTP/accuracy/test_predicted_target_grad.csv") 
+test<-read.csv("C:/Users/hp/BTP/accuracy/test_target.csv") 
+library(caret)
+confusionMatrix(grad$result, test$malicious)
+
+
+
+
+
