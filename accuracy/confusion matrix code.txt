@@ -1,0 +1,35 @@
+grad<-read.csv("C:/Users/hp/BTP/accuracy/test_predicted_target_grad.csv") 
+test<-read.csv("C:/Users/hp/BTP/accuracy/test_target.csv") 
+library(caret)
+confusionMatrix(grad$result, test$malicious)
+
+
+
+
+
+
+svm<-read.csv("G:/btp/URLcheck-master_modified/test_predicted_target_svm.csv") 
+
+rf<-read.csv("G:/btp/URLcheck-master_modified/test_predicted_target_rf.csv") 
+
+bag<-read.csv("G:/btp/URLcheck-master_modified/test_predicted_target_bag.csv") 
+
+logis<-read.csv("G:/btp/URLcheck-master_modified/test_predicted_target_logis.csv") 
+
+deci<-read.csv("G:/btp/URLcheck-master_modified/test_predicted_target_deci.csv") 
+
+Kneigh<-read.csv("G:/btp/URLcheck-master_modified/test_predicted_target_Kneigh.csv") 
+
+
+
+confusionMatrix(rf$result, test$malicious)
+
+confusionMatrix(svm$result, test$malicious)
+
+confusionMatrix(bag$result, test$malicious)
+confusionMatrix(logis$result, test$malicious)
+
+confusionMatrix(Kneigh$result, test$malicious)
+
+confusionMatrix(deci$result, test$malicious)
+
